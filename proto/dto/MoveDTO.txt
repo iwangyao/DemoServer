@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+message DeltaDirection
+{
+	float x=1;
+	float y=2;
+}
+
+message FrameInfo
+{
+		int32 Frame=1;
+		DeltaDirection Move=2;
+		float deltaTime=3;
+		int32 Skillid=4;
+}
+
+message ClientMoveDTO
+{
+		int32 Roomid=1;
+		int32 Seat=2;
+		int32 Bagid=3;
+		repeated FrameInfo msg=4;
+}
+
+message ClientDTO
+{
+        int32 Seat=1;
+        repeated FrameInfo msg=2;
+}
+message ServerMoveDTO
+{
+		int32 Bagid=1;
+		repeated ClientDTO clientInfo=2;
+}
+
+

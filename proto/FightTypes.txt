@@ -1,0 +1,13 @@
+syntax = "proto3";
+enum FightTypes
+{
+	MOVE_CREQ=0;
+	SKILL_CREQ=1;
+	LOAD_UP_CREQ=2;
+	LOAD_UP_SREQ=3;
+	INFORM_SRES=4;
+	LIVEROOM_CREQ=5;
+	DEATH_CREQ=6;
+	DEATH_SRES=7;
+	WIN_CREQ=7;
+}
